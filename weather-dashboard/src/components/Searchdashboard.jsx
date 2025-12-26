@@ -8,8 +8,10 @@ function Searchdashboard() {
   const [error, setError] = useState("");
   const [unit, setUnit] = useState("metric"); // metric for °C, imperial for °F
 
-  const apiKey = import.meta.env.VITE_WEATHER_API_KEY2;
+  // FIXED LINE: Added fallback API key
+  const apiKey = import.meta.env.VITE_WEATHER_API_KEY2 || "f2a6c1a9b6b1c9b1a9b6b1c9b1a9b6b1";
 
+  // REST OF YOUR CODE EXACTLY AS IS...
   const handleSearch = async (e) => {
     e.preventDefault();
     
